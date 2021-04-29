@@ -10,7 +10,7 @@ echo 'Enter your linux vm username';
 read LINUXUSERNAME;
 
 ## Set-up Directory to home
-cd /home/$LINUXUSERNAME
+cd /home/"${LINUXUSERNAME}"
 
 ## Update packages and upgrade system
 apt-get update -y
@@ -24,7 +24,7 @@ add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu fo
 apt-get update -y
 apt-cache policy docker-ce
 apt-get install -y docker-ce
-usermod -aG docker ${LINUXUSERNAME}
+usermod -aG docker "${LINUXUSERNAME}"
 
 ## Install Kubectl
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
@@ -37,12 +37,12 @@ dpkg -i minikube_latest_amd64.deb
 
 
 ## create minikube mount directory
-cd /home/$LINUXUSERNAME
+cd /home/"${LINUXUSERNAME}"
 mkdir mount
 
 
 echo "……….RUN THESE COMMANDS NEXT…….."
 echo "minikube start"
-echo "minikube mount /home/$LINUXUSERNAME/mount:/host"
+echo "minikube mount /home/"${LINUXUSERNAME}"/mount:/host"
 
 su - $LINUXUSERNAME
