@@ -1,10 +1,7 @@
 # Use to install Docker, Minikube, and Kubectl on Ubuntu 20.04
 
-copy script to clipboard `nano install.sh` 
-paste contents of clipboard into the file
-hit `ctl + x` then `y` then `enter`
-
-`chmod +x install.sh`
-`sudo ./install.sh`
+`git clone https://github.com/Kyle9021/Set-up_Scripts`
+`cd Set-up_Scripts`
+`bash Ubuntu_20.04_BASH_INSTALL_DOCKER_MINIKUBE_KUBECTL`
 
 viola!
