@@ -2,6 +2,6 @@
 
 * `git clone https://github.com/Kyle9021/Set-up_Scripts`
 * `cd Set-up_Scripts`
-* `bash Ubuntu_20.04_BASH_INSTALL_DOCKER_MINIKUBE_KUBECTL`
+* `sudo bash Ubuntu_20.04_BASH_INSTALL_DOCKER_MINIKUBE_KUBECTL`
 
 viola!
